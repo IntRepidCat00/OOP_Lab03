@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow_PNR</class>
+ <widget class="QMainWindow" name="MainWindow_PNR">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>839</width>
+    <height>593</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Notepad_PNR</string>
+  </property>
+  <widget class="QWidget" name="centralwidget_PNR">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>160</width>
+      <height>89</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_PNR">
+     <item>
+      <widget class="QTextEdit" name="textEdit_PNR"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar_PNR">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>839</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile_PNR">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_PNR"/>
+    <addaction name="actionOpen_PNR"/>
+    <addaction name="actionSave_PNR"/>
+    <addaction name="actionSave_as_PNR"/>
+    <addaction name="actionPrint_PNR"/>
+    <addaction name="actionExit_PNR"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit_PNR">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionUndo_PNR"/>
+    <addaction name="actionRedo_PNR"/>
+    <addaction name="actionCopy_PNR"/>
+    <addaction name="actionPaste_PNR"/>
+    <addaction name="actionCut_PNR"/>
+    <addaction name="actionFont"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile_PNR"/>
+   <addaction name="menuEdit_PNR"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar_PNR"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew_PNR"/>
+   <addaction name="actionOpen_PNR"/>
+   <addaction name="actionUndo_PNR"/>
+   <addaction name="actionRedo_PNR"/>
+   <addaction name="actionFont"/>
+   <addaction name="actionPrint_PNR"/>
+   <addaction name="actionExit_PNR"/>
+  </widget>
+  <action name="actionNew_PNR">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/new.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionSave_PNR">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/save.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_as_PNR">
+   <property name="icon">
+    <iconset resource="resources_PNR.qrc">
+     <normaloff>:/img/save.png</normaloff>:/img/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save as</string>
+   </property>
+  </action>
+  <action name="actionOpen_PNR">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/open.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionPrint_PNR">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/print.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionExit_PNR">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/img/icons/exit.png</normaloff>
+     <normalon>:/img/exit.png</normalon>:/img/icons/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionCopy_PNR">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/copy.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionPaste_PNR">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/paste.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionCut_PNR">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/cut.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="actionUndo_PNR">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/undo.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionRedo_PNR">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/redo.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/font.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Font</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources_PNR.qrc"/>
+ </resources>
+ <connections/>
+</ui>
