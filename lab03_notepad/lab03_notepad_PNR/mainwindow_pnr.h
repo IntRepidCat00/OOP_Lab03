@@ -10,6 +10,7 @@
 #include <QPrintDialog>
 #include <QFontDialog>
 #include <QTimer>
+#include <QContextMenuEvent>
 #include "aboutwindow.h"
 
 QT_BEGIN_NAMESPACE
@@ -28,6 +29,7 @@ private:
 public:
     MainWindow_PNR(QWidget *parent = nullptr);
     ~MainWindow_PNR();
+
 
 private slots:
     void on_actionNew_NPR_triggered();
@@ -52,8 +54,12 @@ private slots:
 
     void on_actionAbout_triggered();
 
+    void ShowContextMenu(const QPoint& pos);
+
 private:
     Ui::MainWindow_PNR *ui;
 
 };
+
+
 #endif // MAINWINDOW_PNR_H

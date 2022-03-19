@@ -21,12 +21,28 @@ MainWindow_PNR::MainWindow_PNR(QWidget *parent)
     ui->actionPrint_PNR->setShortcut(tr("CTRL+P"));
     ui->actionSave_PNR->setShortcut(tr("CTRL+S"));
     ui->actionSave_as_PNR->setShortcut(tr("CTRL+SHIFT+S"));
+    ui->textEdit_PNR->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(ui->textEdit_PNR, SIGNAL(customContextMenuRequested(const QPoint&)),
+            this, SLOT(ShowContextMenu(const QPoint&)));
     tmr->start();
 }
 
 MainWindow_PNR::~MainWindow_PNR()
 {
     delete ui;
+}
+
+void MainWindow_PNR::ShowContextMenu(const QPoint& pos)
+{
+// for most widgets
+QPoint globalPos = ui->textEdit_PNR->mapToGlobal(pos);
+// for QAbstractScrollArea and derived classes you would use:
+// QPoint globalPos = myWidget->viewport()->mapToGlobal(pos);
+QMenu myMenu;
+myMenu.addAction(ui->actionCopy_PNR);
+myMenu.addAction(ui->actionCut_PNR);
+myMenu.addAction(ui->actionPaste_PNR);
+myMenu.exec(globalPos);
 }
 
 void MainWindow_PNR::isSaved()
