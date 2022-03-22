@@ -12,6 +12,8 @@
 #include <QTimer>
 #include <QContextMenuEvent>
 #include "aboutwindow.h"
+#include <QCloseEvent>
+#include "closedialog_pnr.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow_PNR; }
@@ -29,7 +31,6 @@ private:
 public:
     MainWindow_PNR(QWidget *parent = nullptr);
     ~MainWindow_PNR();
-
 
 private slots:
     void on_actionNew_NPR_triggered();
@@ -58,7 +59,7 @@ private slots:
 
 private:
     Ui::MainWindow_PNR *ui;
-
+    void closeEvent(QCloseEvent *event);
 };
 
 

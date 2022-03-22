@@ -6,69 +6,89 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>643</width>
+    <height>533</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>ImageViewer_PNR</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QScrollArea" name="scrollArea">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>210</y>
-      <width>120</width>
-      <height>87</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="widgetResizable">
-     <bool>true</bool>
-    </property>
-    <widget class="QWidget" name="scrollAreaWidgetContents">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>118</width>
-       <height>85</height>
-      </rect>
-     </property>
-     <widget class="QLabel" name="imageLabel">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>30</y>
-        <width>63</width>
-        <height>20</height>
-       </rect>
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_PNR">
+      <property name="leftMargin">
+       <number>0</number>
       </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
+      <property name="topMargin">
+       <number>0</number>
       </property>
-      <property name="text">
-       <string/>
+      <property name="rightMargin">
+       <number>0</number>
       </property>
-     </widget>
-    </widget>
-   </widget>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_PNR">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>617</width>
+           <height>481</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="0">
+           <widget class="QLabel" name="imageLabel_PNR">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
-  <widget class="QMenuBar" name="menubar_PNR">
+  <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>643</width>
      <height>26</height>
     </rect>
    </property>
@@ -76,40 +96,28 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionOpen"/>
-    <addaction name="actionPrint"/>
-    <addaction name="actionSave_as"/>
-    <addaction name="separator"/>
-    <addaction name="actionExit"/>
+    <addaction name="actionOpen_PNR"/>
+    <addaction name="actionSave_as_PNR"/>
    </widget>
-   <widget class="QMenu" name="menuView">
+   <widget class="QMenu" name="menuTool">
     <property name="title">
-     <string>View</string>
+     <string>Tool</string>
     </property>
-    <addaction name="actionZoom_In"/>
-    <addaction name="actionZoom_Out"/>
+    <addaction name="actionZoom_In_PNR"/>
+    <addaction name="actionZoom_Out_PNR"/>
     <addaction name="actionNormal_Size"/>
-    <addaction name="separator"/>
-    <addaction name="actionFit_to_Window"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
      <string>Help</string>
     </property>
-    <addaction name="actionAbout"/>
-   </widget>
-   <widget class="QMenu" name="menuEdit">
-    <property name="title">
-     <string>Edit</string>
-    </property>
-    <addaction name="actionCopy"/>
+    <addaction name="actionAbout_PNR"/>
    </widget>
    <addaction name="menuFile"/>
-   <addaction name="menuEdit"/>
-   <addaction name="menuView"/>
+   <addaction name="menuTool"/>
    <addaction name="menuHelp"/>
   </widget>
-  <action name="actionOpen">
+  <action name="actionOpen_PNR">
    <property name="text">
     <string>Open</string>
    </property>
@@ -117,29 +125,15 @@
     <string>Ctrl+O</string>
    </property>
   </action>
-  <action name="actionPrint">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
+  <action name="actionSave_as_PNR">
    <property name="text">
-    <string>Print</string>
+    <string>Save</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+P</string>
+    <string>Ctrl+S</string>
    </property>
   </action>
-  <action name="actionExit">
-   <property name="text">
-    <string>Exit</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+Q</string>
-   </property>
-  </action>
-  <action name="actionZoom_In">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
+  <action name="actionZoom_In_PNR">
    <property name="text">
     <string>Zoom In</string>
    </property>
@@ -147,10 +141,7 @@
     <string>Ctrl++</string>
    </property>
   </action>
-  <action name="actionZoom_Out">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
+  <action name="actionZoom_Out_PNR">
    <property name="text">
     <string>Zoom Out</string>
    </property>
@@ -158,58 +149,17 @@
     <string>Ctrl+-</string>
    </property>
   </action>
-  <action name="actionNormal_Size">
-   <property name="enabled">
-    <bool>false</bool>
+  <action name="actionAbout_PNR">
+   <property name="text">
+    <string>About</string>
    </property>
+  </action>
+  <action name="actionNormal_Size">
    <property name="text">
     <string>Normal Size</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+N</string>
-   </property>
-  </action>
-  <action name="actionFit_to_Window">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>Fit to Window</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+F</string>
-   </property>
-  </action>
-  <action name="actionAbout">
-   <property name="text">
-    <string>About</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+I</string>
-   </property>
-  </action>
-  <action name="actionSave_as">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>Save as</string>
-   </property>
-  </action>
-  <action name="actionCopy">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>Copy</string>
-   </property>
-  </action>
-  <action name="actionPaste">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>Paste</string>
    </property>
   </action>
  </widget>

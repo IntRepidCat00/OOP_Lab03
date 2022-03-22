@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
@@ -24,112 +25,106 @@ QT_BEGIN_NAMESPACE
 class Ui_ImageViewer_PNR
 {
 public:
-    QAction *actionOpen;
-    QAction *actionPrint;
-    QAction *actionExit;
-    QAction *actionZoom_In;
-    QAction *actionZoom_Out;
+    QAction *actionOpen_PNR;
+    QAction *actionSave_as_PNR;
+    QAction *actionZoom_In_PNR;
+    QAction *actionZoom_Out_PNR;
+    QAction *actionAbout_PNR;
     QAction *actionNormal_Size;
-    QAction *actionFit_to_Window;
-    QAction *actionAbout;
-    QAction *actionSave_as;
-    QAction *actionCopy;
-    QAction *actionPaste;
     QWidget *centralwidget;
+    QGridLayout *gridLayout_4;
+    QGridLayout *gridLayout_PNR;
     QScrollArea *scrollArea;
-    QWidget *scrollAreaWidgetContents;
-    QLabel *imageLabel;
-    QMenuBar *menubar_PNR;
+    QWidget *scrollAreaWidgetContents_PNR;
+    QGridLayout *gridLayout_5;
+    QLabel *imageLabel_PNR;
+    QMenuBar *menubar;
     QMenu *menuFile;
-    QMenu *menuView;
+    QMenu *menuTool;
     QMenu *menuHelp;
-    QMenu *menuEdit;
 
     void setupUi(QMainWindow *ImageViewer_PNR)
     {
         if (ImageViewer_PNR->objectName().isEmpty())
             ImageViewer_PNR->setObjectName(QString::fromUtf8("ImageViewer_PNR"));
-        ImageViewer_PNR->resize(800, 600);
-        actionOpen = new QAction(ImageViewer_PNR);
-        actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
-        actionPrint = new QAction(ImageViewer_PNR);
-        actionPrint->setObjectName(QString::fromUtf8("actionPrint"));
-        actionPrint->setEnabled(false);
-        actionExit = new QAction(ImageViewer_PNR);
-        actionExit->setObjectName(QString::fromUtf8("actionExit"));
-        actionZoom_In = new QAction(ImageViewer_PNR);
-        actionZoom_In->setObjectName(QString::fromUtf8("actionZoom_In"));
-        actionZoom_In->setEnabled(false);
-        actionZoom_Out = new QAction(ImageViewer_PNR);
-        actionZoom_Out->setObjectName(QString::fromUtf8("actionZoom_Out"));
-        actionZoom_Out->setEnabled(false);
+        ImageViewer_PNR->resize(643, 533);
+        actionOpen_PNR = new QAction(ImageViewer_PNR);
+        actionOpen_PNR->setObjectName(QString::fromUtf8("actionOpen_PNR"));
+        actionSave_as_PNR = new QAction(ImageViewer_PNR);
+        actionSave_as_PNR->setObjectName(QString::fromUtf8("actionSave_as_PNR"));
+        actionZoom_In_PNR = new QAction(ImageViewer_PNR);
+        actionZoom_In_PNR->setObjectName(QString::fromUtf8("actionZoom_In_PNR"));
+        actionZoom_Out_PNR = new QAction(ImageViewer_PNR);
+        actionZoom_Out_PNR->setObjectName(QString::fromUtf8("actionZoom_Out_PNR"));
+        actionAbout_PNR = new QAction(ImageViewer_PNR);
+        actionAbout_PNR->setObjectName(QString::fromUtf8("actionAbout_PNR"));
         actionNormal_Size = new QAction(ImageViewer_PNR);
         actionNormal_Size->setObjectName(QString::fromUtf8("actionNormal_Size"));
-        actionNormal_Size->setEnabled(false);
-        actionFit_to_Window = new QAction(ImageViewer_PNR);
-        actionFit_to_Window->setObjectName(QString::fromUtf8("actionFit_to_Window"));
-        actionFit_to_Window->setEnabled(false);
-        actionAbout = new QAction(ImageViewer_PNR);
-        actionAbout->setObjectName(QString::fromUtf8("actionAbout"));
-        actionSave_as = new QAction(ImageViewer_PNR);
-        actionSave_as->setObjectName(QString::fromUtf8("actionSave_as"));
-        actionSave_as->setEnabled(false);
-        actionCopy = new QAction(ImageViewer_PNR);
-        actionCopy->setObjectName(QString::fromUtf8("actionCopy"));
-        actionCopy->setEnabled(false);
-        actionPaste = new QAction(ImageViewer_PNR);
-        actionPaste->setObjectName(QString::fromUtf8("actionPaste"));
-        actionPaste->setEnabled(false);
         centralwidget = new QWidget(ImageViewer_PNR);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        gridLayout_4 = new QGridLayout(centralwidget);
+        gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
+        gridLayout_PNR = new QGridLayout();
+        gridLayout_PNR->setSpacing(0);
+        gridLayout_PNR->setObjectName(QString::fromUtf8("gridLayout_PNR"));
+        gridLayout_PNR->setContentsMargins(0, 0, 0, 0);
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
-        scrollArea->setGeometry(QRect(150, 210, 120, 87));
-        QSizePolicy sizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(scrollArea->sizePolicy().hasHeightForWidth());
         scrollArea->setSizePolicy(sizePolicy);
         scrollArea->setWidgetResizable(true);
-        scrollAreaWidgetContents = new QWidget();
-        scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 118, 85));
-        imageLabel = new QLabel(scrollAreaWidgetContents);
-        imageLabel->setObjectName(QString::fromUtf8("imageLabel"));
-        imageLabel->setGeometry(QRect(10, 30, 63, 20));
-        sizePolicy.setHeightForWidth(imageLabel->sizePolicy().hasHeightForWidth());
-        imageLabel->setSizePolicy(sizePolicy);
-        scrollArea->setWidget(scrollAreaWidgetContents);
-        ImageViewer_PNR->setCentralWidget(centralwidget);
-        menubar_PNR = new QMenuBar(ImageViewer_PNR);
-        menubar_PNR->setObjectName(QString::fromUtf8("menubar_PNR"));
-        menubar_PNR->setGeometry(QRect(0, 0, 800, 26));
-        menuFile = new QMenu(menubar_PNR);
-        menuFile->setObjectName(QString::fromUtf8("menuFile"));
-        menuView = new QMenu(menubar_PNR);
-        menuView->setObjectName(QString::fromUtf8("menuView"));
-        menuHelp = new QMenu(menubar_PNR);
-        menuHelp->setObjectName(QString::fromUtf8("menuHelp"));
-        menuEdit = new QMenu(menubar_PNR);
-        menuEdit->setObjectName(QString::fromUtf8("menuEdit"));
-        ImageViewer_PNR->setMenuBar(menubar_PNR);
+        scrollAreaWidgetContents_PNR = new QWidget();
+        scrollAreaWidgetContents_PNR->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_PNR"));
+        scrollAreaWidgetContents_PNR->setGeometry(QRect(0, 0, 617, 481));
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(scrollAreaWidgetContents_PNR->sizePolicy().hasHeightForWidth());
+        scrollAreaWidgetContents_PNR->setSizePolicy(sizePolicy1);
+        gridLayout_5 = new QGridLayout(scrollAreaWidgetContents_PNR);
+        gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
+        imageLabel_PNR = new QLabel(scrollAreaWidgetContents_PNR);
+        imageLabel_PNR->setObjectName(QString::fromUtf8("imageLabel_PNR"));
+        imageLabel_PNR->setEnabled(true);
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(imageLabel_PNR->sizePolicy().hasHeightForWidth());
+        imageLabel_PNR->setSizePolicy(sizePolicy2);
 
-        menubar_PNR->addAction(menuFile->menuAction());
-        menubar_PNR->addAction(menuEdit->menuAction());
-        menubar_PNR->addAction(menuView->menuAction());
-        menubar_PNR->addAction(menuHelp->menuAction());
-        menuFile->addAction(actionOpen);
-        menuFile->addAction(actionPrint);
-        menuFile->addAction(actionSave_as);
-        menuFile->addSeparator();
-        menuFile->addAction(actionExit);
-        menuView->addAction(actionZoom_In);
-        menuView->addAction(actionZoom_Out);
-        menuView->addAction(actionNormal_Size);
-        menuView->addSeparator();
-        menuView->addAction(actionFit_to_Window);
-        menuHelp->addAction(actionAbout);
-        menuEdit->addAction(actionCopy);
+        gridLayout_5->addWidget(imageLabel_PNR, 0, 0, 1, 1);
+
+        scrollArea->setWidget(scrollAreaWidgetContents_PNR);
+
+        gridLayout_PNR->addWidget(scrollArea, 0, 0, 1, 1);
+
+
+        gridLayout_4->addLayout(gridLayout_PNR, 0, 0, 1, 1);
+
+        ImageViewer_PNR->setCentralWidget(centralwidget);
+        menubar = new QMenuBar(ImageViewer_PNR);
+        menubar->setObjectName(QString::fromUtf8("menubar"));
+        menubar->setGeometry(QRect(0, 0, 643, 26));
+        menuFile = new QMenu(menubar);
+        menuFile->setObjectName(QString::fromUtf8("menuFile"));
+        menuTool = new QMenu(menubar);
+        menuTool->setObjectName(QString::fromUtf8("menuTool"));
+        menuHelp = new QMenu(menubar);
+        menuHelp->setObjectName(QString::fromUtf8("menuHelp"));
+        ImageViewer_PNR->setMenuBar(menubar);
+
+        menubar->addAction(menuFile->menuAction());
+        menubar->addAction(menuTool->menuAction());
+        menubar->addAction(menuHelp->menuAction());
+        menuFile->addAction(actionOpen_PNR);
+        menuFile->addAction(actionSave_as_PNR);
+        menuTool->addAction(actionZoom_In_PNR);
+        menuTool->addAction(actionZoom_Out_PNR);
+        menuTool->addAction(actionNormal_Size);
+        menuHelp->addAction(actionAbout_PNR);
 
         retranslateUi(ImageViewer_PNR);
 
@@ -139,46 +134,16 @@ public:
     void retranslateUi(QMainWindow *ImageViewer_PNR)
     {
         ImageViewer_PNR->setWindowTitle(QCoreApplication::translate("ImageViewer_PNR", "ImageViewer_PNR", nullptr));
-        actionOpen->setText(QCoreApplication::translate("ImageViewer_PNR", "Open", nullptr));
-#if QT_CONFIG(shortcut)
-        actionOpen->setShortcut(QCoreApplication::translate("ImageViewer_PNR", "Ctrl+O", nullptr));
-#endif // QT_CONFIG(shortcut)
-        actionPrint->setText(QCoreApplication::translate("ImageViewer_PNR", "Print", nullptr));
-#if QT_CONFIG(shortcut)
-        actionPrint->setShortcut(QCoreApplication::translate("ImageViewer_PNR", "Ctrl+P", nullptr));
-#endif // QT_CONFIG(shortcut)
-        actionExit->setText(QCoreApplication::translate("ImageViewer_PNR", "Exit", nullptr));
-#if QT_CONFIG(shortcut)
-        actionExit->setShortcut(QCoreApplication::translate("ImageViewer_PNR", "Ctrl+Q", nullptr));
-#endif // QT_CONFIG(shortcut)
-        actionZoom_In->setText(QCoreApplication::translate("ImageViewer_PNR", "Zoom In", nullptr));
-#if QT_CONFIG(shortcut)
-        actionZoom_In->setShortcut(QCoreApplication::translate("ImageViewer_PNR", "Ctrl++", nullptr));
-#endif // QT_CONFIG(shortcut)
-        actionZoom_Out->setText(QCoreApplication::translate("ImageViewer_PNR", "Zoom Out", nullptr));
-#if QT_CONFIG(shortcut)
-        actionZoom_Out->setShortcut(QCoreApplication::translate("ImageViewer_PNR", "Ctrl+-", nullptr));
-#endif // QT_CONFIG(shortcut)
+        actionOpen_PNR->setText(QCoreApplication::translate("ImageViewer_PNR", "Open", nullptr));
+        actionSave_as_PNR->setText(QCoreApplication::translate("ImageViewer_PNR", "Save", nullptr));
+        actionZoom_In_PNR->setText(QCoreApplication::translate("ImageViewer_PNR", "Zoom In", nullptr));
+        actionZoom_Out_PNR->setText(QCoreApplication::translate("ImageViewer_PNR", "Zoom Out", nullptr));
+        actionAbout_PNR->setText(QCoreApplication::translate("ImageViewer_PNR", "About", nullptr));
         actionNormal_Size->setText(QCoreApplication::translate("ImageViewer_PNR", "Normal Size", nullptr));
-#if QT_CONFIG(shortcut)
-        actionNormal_Size->setShortcut(QCoreApplication::translate("ImageViewer_PNR", "Ctrl+N", nullptr));
-#endif // QT_CONFIG(shortcut)
-        actionFit_to_Window->setText(QCoreApplication::translate("ImageViewer_PNR", "Fit to Window", nullptr));
-#if QT_CONFIG(shortcut)
-        actionFit_to_Window->setShortcut(QCoreApplication::translate("ImageViewer_PNR", "Ctrl+F", nullptr));
-#endif // QT_CONFIG(shortcut)
-        actionAbout->setText(QCoreApplication::translate("ImageViewer_PNR", "About", nullptr));
-#if QT_CONFIG(shortcut)
-        actionAbout->setShortcut(QCoreApplication::translate("ImageViewer_PNR", "Ctrl+I", nullptr));
-#endif // QT_CONFIG(shortcut)
-        actionSave_as->setText(QCoreApplication::translate("ImageViewer_PNR", "Save as", nullptr));
-        actionCopy->setText(QCoreApplication::translate("ImageViewer_PNR", "Copy", nullptr));
-        actionPaste->setText(QCoreApplication::translate("ImageViewer_PNR", "Paste", nullptr));
-        imageLabel->setText(QString());
+        imageLabel_PNR->setText(QString());
         menuFile->setTitle(QCoreApplication::translate("ImageViewer_PNR", "File", nullptr));
-        menuView->setTitle(QCoreApplication::translate("ImageViewer_PNR", "View", nullptr));
+        menuTool->setTitle(QCoreApplication::translate("ImageViewer_PNR", "Tool", nullptr));
         menuHelp->setTitle(QCoreApplication::translate("ImageViewer_PNR", "Help", nullptr));
-        menuEdit->setTitle(QCoreApplication::translate("ImageViewer_PNR", "Edit", nullptr));
     } // retranslateUi
 
 };

@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'aboutwindow.h'
+** Meta object code from reading C++ file 'aboutwindow_pnr.h'
 **
 ** Created by: The Qt Meta Object Compiler version 68 (Qt 6.2.3)
 **
@@ -7,11 +7,11 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../lab03_imageViewer_PNR/aboutwindow.h"
+#include "../../lab03_imageViewer_PNR/aboutwindow_pnr.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'aboutwindow.h' doesn't include <QObject>."
+#error "The header file 'aboutwindow_pnr.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
 #error "This file was generated using the moc from 6.2.3. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -21,22 +21,22 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_aboutwindow_t {
+struct qt_meta_stringdata_aboutWindow_PNR_t {
     const uint offsetsAndSize[2];
-    char stringdata0[12];
+    char stringdata0[16];
 };
 #define QT_MOC_LITERAL(ofs, len) \
-    uint(offsetof(qt_meta_stringdata_aboutwindow_t, stringdata0) + ofs), len 
-static const qt_meta_stringdata_aboutwindow_t qt_meta_stringdata_aboutwindow = {
+    uint(offsetof(qt_meta_stringdata_aboutWindow_PNR_t, stringdata0) + ofs), len 
+static const qt_meta_stringdata_aboutWindow_PNR_t qt_meta_stringdata_aboutWindow_PNR = {
     {
-QT_MOC_LITERAL(0, 11) // "aboutwindow"
+QT_MOC_LITERAL(0, 15) // "aboutWindow_PNR"
 
     },
-    "aboutwindow"
+    "aboutWindow_PNR"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_aboutwindow[] = {
+static const uint qt_meta_data_aboutWindow_PNR[] = {
 
  // content:
       10,       // revision
@@ -52,7 +52,7 @@ static const uint qt_meta_data_aboutwindow[] = {
        0        // eod
 };
 
-void aboutwindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void aboutWindow_PNR::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     (void)_o;
     (void)_id;
@@ -60,14 +60,14 @@ void aboutwindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
     (void)_a;
 }
 
-const QMetaObject aboutwindow::staticMetaObject = { {
+const QMetaObject aboutWindow_PNR::staticMetaObject = { {
     QMetaObject::SuperData::link<QDialog::staticMetaObject>(),
-    qt_meta_stringdata_aboutwindow.offsetsAndSize,
-    qt_meta_data_aboutwindow,
+    qt_meta_stringdata_aboutWindow_PNR.offsetsAndSize,
+    qt_meta_data_aboutWindow_PNR,
     qt_static_metacall,
     nullptr,
-qt_incomplete_metaTypeArray<qt_meta_stringdata_aboutwindow_t
-, QtPrivate::TypeAndForceComplete<aboutwindow, std::true_type>
+qt_incomplete_metaTypeArray<qt_meta_stringdata_aboutWindow_PNR_t
+, QtPrivate::TypeAndForceComplete<aboutWindow_PNR, std::true_type>
 
 
 
@@ -76,20 +76,20 @@ qt_incomplete_metaTypeArray<qt_meta_stringdata_aboutwindow_t
 } };
 
 
-const QMetaObject *aboutwindow::metaObject() const
+const QMetaObject *aboutWindow_PNR::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *aboutwindow::qt_metacast(const char *_clname)
+void *aboutWindow_PNR::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_aboutwindow.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_aboutWindow_PNR.stringdata0))
         return static_cast<void*>(this);
     return QDialog::qt_metacast(_clname);
 }
 
-int aboutwindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int aboutWindow_PNR::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QDialog::qt_metacall(_c, _id, _a);
     return _id;

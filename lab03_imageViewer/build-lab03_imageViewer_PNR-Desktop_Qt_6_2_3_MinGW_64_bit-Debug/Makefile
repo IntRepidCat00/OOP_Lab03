@@ -293,13 +293,12 @@ Makefile: ../lab03_imageViewer_PNR/lab03_imageViewer_PNR.pro C:/Qt/6.2.3/mingw_6
 		C:/Qt/6.2.3/mingw_64/mkspecs/features/yacc.prf \
 		C:/Qt/6.2.3/mingw_64/mkspecs/features/lex.prf \
 		../lab03_imageViewer_PNR/lab03_imageViewer_PNR.pro \
-		C:/Qt/6.2.3/mingw_64/lib/Qt6PrintSupport.prl \
 		C:/Qt/6.2.3/mingw_64/lib/Qt6Widgets.prl \
 		C:/Qt/6.2.3/mingw_64/lib/Qt6Gui.prl \
 		C:/Qt/6.2.3/mingw_64/lib/Qt6Core.prl \
 		C:/Qt/6.2.3/mingw_64/lib/Qt6EntryPoint.prl \
 		C:/Qt/6.2.3/mingw_64/mkspecs/features/build_pass.prf \
-		../lab03_imageViewer_PNR/img.qrc
+		../lab03_imageViewer_PNR/res.qrc
 	$(QMAKE) -o Makefile ..\lab03_imageViewer_PNR\lab03_imageViewer_PNR.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 C:/Qt/6.2.3/mingw_64/mkspecs/features/spec_pre.prf:
 C:/Qt/6.2.3/mingw_64/mkspecs/features/device_config.prf:
@@ -524,13 +523,12 @@ C:/Qt/6.2.3/mingw_64/mkspecs/features/exceptions.prf:
 C:/Qt/6.2.3/mingw_64/mkspecs/features/yacc.prf:
 C:/Qt/6.2.3/mingw_64/mkspecs/features/lex.prf:
 ../lab03_imageViewer_PNR/lab03_imageViewer_PNR.pro:
-C:/Qt/6.2.3/mingw_64/lib/Qt6PrintSupport.prl:
 C:/Qt/6.2.3/mingw_64/lib/Qt6Widgets.prl:
 C:/Qt/6.2.3/mingw_64/lib/Qt6Gui.prl:
 C:/Qt/6.2.3/mingw_64/lib/Qt6Core.prl:
 C:/Qt/6.2.3/mingw_64/lib/Qt6EntryPoint.prl:
 C:/Qt/6.2.3/mingw_64/mkspecs/features/build_pass.prf:
-../lab03_imageViewer_PNR/img.qrc:
+../lab03_imageViewer_PNR/res.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\lab03_imageViewer_PNR\lab03_imageViewer_PNR.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

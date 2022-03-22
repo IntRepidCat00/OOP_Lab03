@@ -2,20 +2,9 @@
 #define IMAGEVIEWER_PNR_H
 
 #include <QMainWindow>
-#include <QImage>
-#include <QtPrintSupport/qtprintsupportglobal.h>
-#include <QPainter>
-#include <QPrinter>
-#include <QPrintDialog>
-#include <QImageReader>
-#include <QImageWriter>
 #include <QFileDialog>
-#include <QMessageBox>
-#include <QColorSpace>
-#include <QStandardPaths>
-#include <QScrollBar>
-#include <QClipboard>
-#include "aboutwindow.h"
+#include <QImageWriter>
+#include "aboutwindow_pnr.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class ImageViewer_PNR; }
@@ -30,32 +19,25 @@ public:
     ~ImageViewer_PNR();
 
 private slots:
+    void on_actionOpen_PNR_triggered();
 
-    void on_actionOpen_triggered();
+    void on_actionZoom_In_PNR_triggered();
 
-    void on_actionFit_to_Window_triggered();
-
-    void on_actionSave_as_triggered();
-
-    void on_actionPrint_triggered();
+    void on_actionZoom_Out_PNR_triggered();
 
     void on_actionNormal_Size_triggered();
 
-    void on_actionZoom_In_triggered();
+    void on_actionSave_as_PNR_triggered();
 
-    void on_actionZoom_Out_triggered();
-
-    void on_actionCopy_triggered();
-
-    void on_actionAbout_triggered();
+    void on_actionAbout_PNR_triggered();
 
 private:
     Ui::ImageViewer_PNR *ui;
 
+    QString  filename;
+    double imageScale = 1.0;
     QImage image;
-    double scaleFactor = 1;
-    void updateActions();
-    void adjustScrollBar(QScrollBar *scrollBar, double factor);
-    void scaleImage(double factor);
+    int baseWidth;
+    int baseHeight;
 };
 #endif // IMAGEVIEWER_PNR_H

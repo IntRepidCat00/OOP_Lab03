@@ -185,3 +185,50 @@ void MainWindow_PNR::on_actionAbout_triggered()
     ab.exec();
 }
 
+void MainWindow_PNR::closeEvent(QCloseEvent *event)
+{
+    event->ignore();
+    QMessageBox msgBox;
+    msgBox.setText("The document has been modified.");
+    msgBox.setInformativeText("Do you want to save your changes?");
+    msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
+    msgBox.setDefaultButton(QMessageBox::Discard);
+    int res = msgBox.exec();
+    if (res == QMessageBox::Save)
+    {
+        if(firstsave)
+        {
+            QString filename = QFileDialog::getSaveFileName(this, "Save as");
+            if(filename.isEmpty())
+            {
+                event->ignore();
+            }
+            QFile file(filename);
+            if(!file.open(QFile::WriteOnly | QFile::Text))
+            {
+                QMessageBox::warning(this, "Warning", "Cannot save file\n" + file.errorString());
+                event->ignore();
+            }
+            if(firstsave)
+            {
+                firstsave=false;
+            }
+            currentFile = filename;
+            setWindowTitle(filename);
+            QTextStream out(&file);
+            QString text = ui->textEdit_PNR->toPlainText();
+            out << text;
+            savedtext = text;
+            file.close();
+        }
+        event->accept();
+    } else if(res == QMessageBox::Discard)
+    {
+        event->accept();
+    } else
+    {
+        event->ignore();
+    }
+
+}
+

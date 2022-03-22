@@ -1,4 +1,4 @@
-QT       += core gui printsupport
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -9,16 +9,16 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    aboutwindow.cpp \
+    aboutwindow_pnr.cpp \
     main.cpp \
     imageviewer_pnr.cpp
 
 HEADERS += \
-    aboutwindow.h \
+    aboutwindow_pnr.h \
     imageviewer_pnr.h
 
 FORMS += \
-    aboutwindow.ui \
+    aboutwindow_pnr.ui \
     imageviewer_pnr.ui
 
 # Default rules for deployment.
@@ -27,7 +27,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    img.qrc
-
-DISTFILES += \
-    C:/Users/Nazarii/Downloads/papich.jpg
+    res.qrc

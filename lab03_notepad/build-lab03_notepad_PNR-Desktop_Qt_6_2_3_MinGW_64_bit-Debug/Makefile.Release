@@ -426,8 +426,11 @@ release/moc_mainwindow_pnr.cpp: ../lab03_notepad_PNR/mainwindow_pnr.h \
 		C:/Qt/6.2.3/mingw_64/include/QtCore/QTimer \
 		C:/Qt/6.2.3/mingw_64/include/QtCore/qtimer.h \
 		C:/Qt/6.2.3/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.2.3/mingw_64/include/QtGui/QContextMenuEvent \
 		../lab03_notepad_PNR/aboutwindow.h \
 		C:/Qt/6.2.3/mingw_64/include/QtWidgets/QDialog \
+		C:/Qt/6.2.3/mingw_64/include/QtGui/QCloseEvent \
+		../lab03_notepad_PNR/closedialog_pnr.h \
 		release/moc_predefs.h \
 		C:/Qt/6.2.3/mingw_64/bin/moc.exe
 	C:\Qt\6.2.3\mingw_64\bin\moc.exe $(DEFINES) --include D:/Work/University/C1S2/OOP/Lab/Lab3/lab03_notepad/build-lab03_notepad_PNR-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/Qt/6.2.3/mingw_64/mkspecs/win32-g++ -ID:/Work/University/C1S2/OOP/Lab/Lab3/lab03_notepad/lab03_notepad_PNR -IC:/Qt/6.2.3/mingw_64/include -IC:/Qt/6.2.3/mingw_64/include/QtPrintSupport -IC:/Qt/6.2.3/mingw_64/include/QtWidgets -IC:/Qt/6.2.3/mingw_64/include/QtGui -IC:/Qt/6.2.3/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw900_64/x86_64-w64-mingw32/include ..\lab03_notepad_PNR\mainwindow_pnr.h -o release\moc_mainwindow_pnr.cpp
@@ -776,8 +779,11 @@ release/main.o: ../lab03_notepad_PNR/main.cpp ../lab03_notepad_PNR/mainwindow_pn
 		C:/Qt/6.2.3/mingw_64/include/QtCore/QTimer \
 		C:/Qt/6.2.3/mingw_64/include/QtCore/qtimer.h \
 		C:/Qt/6.2.3/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.2.3/mingw_64/include/QtGui/QContextMenuEvent \
 		../lab03_notepad_PNR/aboutwindow.h \
 		C:/Qt/6.2.3/mingw_64/include/QtWidgets/QDialog \
+		C:/Qt/6.2.3/mingw_64/include/QtGui/QCloseEvent \
+		../lab03_notepad_PNR/closedialog_pnr.h \
 		C:/Qt/6.2.3/mingw_64/include/QtWidgets/QApplication \
 		C:/Qt/6.2.3/mingw_64/include/QtWidgets/qapplication.h \
 		C:/Qt/6.2.3/mingw_64/include/QtCore/qcoreapplication.h \
@@ -959,8 +965,11 @@ release/mainwindow_pnr.o: ../lab03_notepad_PNR/mainwindow_pnr.cpp ../lab03_notep
 		C:/Qt/6.2.3/mingw_64/include/QtCore/QTimer \
 		C:/Qt/6.2.3/mingw_64/include/QtCore/qtimer.h \
 		C:/Qt/6.2.3/mingw_64/include/QtCore/qbasictimer.h \
+		C:/Qt/6.2.3/mingw_64/include/QtGui/QContextMenuEvent \
 		../lab03_notepad_PNR/aboutwindow.h \
 		C:/Qt/6.2.3/mingw_64/include/QtWidgets/QDialog \
+		C:/Qt/6.2.3/mingw_64/include/QtGui/QCloseEvent \
+		../lab03_notepad_PNR/closedialog_pnr.h \
 		ui_mainwindow_pnr.h \
 		C:/Qt/6.2.3/mingw_64/include/QtCore/QVariant \
 		C:/Qt/6.2.3/mingw_64/include/QtGui/QAction \
