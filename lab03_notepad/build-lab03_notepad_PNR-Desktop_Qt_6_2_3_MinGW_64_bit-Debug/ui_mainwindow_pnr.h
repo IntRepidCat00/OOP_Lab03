@@ -68,7 +68,7 @@ public:
         actionSave_as_PNR = new QAction(MainWindow_PNR);
         actionSave_as_PNR->setObjectName(QString::fromUtf8("actionSave_as_PNR"));
         QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/img/save.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QString::fromUtf8(":/img/icons/saveas.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionSave_as_PNR->setIcon(icon2);
         actionOpen_PNR = new QAction(MainWindow_PNR);
         actionOpen_PNR->setObjectName(QString::fromUtf8("actionOpen_PNR"));
@@ -77,6 +77,7 @@ public:
         actionOpen_PNR->setIcon(icon3);
         actionPrint_PNR = new QAction(MainWindow_PNR);
         actionPrint_PNR->setObjectName(QString::fromUtf8("actionPrint_PNR"));
+        actionPrint_PNR->setEnabled(false);
         QIcon icon4;
         icon4.addFile(QString::fromUtf8(":/img/print.png"), QSize(), QIcon::Normal, QIcon::On);
         actionPrint_PNR->setIcon(icon4);
@@ -167,11 +168,14 @@ public:
         menuHelp->addAction(actionAbout);
         toolBar->addAction(actionNew_PNR);
         toolBar->addAction(actionOpen_PNR);
+        toolBar->addAction(actionSave_PNR);
+        toolBar->addAction(actionSave_as_PNR);
+        toolBar->addSeparator();
         toolBar->addAction(actionUndo_PNR);
         toolBar->addAction(actionRedo_PNR);
+        toolBar->addSeparator();
         toolBar->addAction(actionFont);
         toolBar->addAction(actionPrint_PNR);
-        toolBar->addAction(actionExit_PNR);
 
         retranslateUi(MainWindow_PNR);
 

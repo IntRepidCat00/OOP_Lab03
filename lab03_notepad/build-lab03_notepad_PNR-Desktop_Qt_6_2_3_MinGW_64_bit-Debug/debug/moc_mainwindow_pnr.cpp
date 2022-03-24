@@ -30,25 +30,24 @@ struct qt_meta_stringdata_MainWindow_PNR_t {
 static const qt_meta_stringdata_MainWindow_PNR_t qt_meta_stringdata_MainWindow_PNR = {
     {
 QT_MOC_LITERAL(0, 14), // "MainWindow_PNR"
-QT_MOC_LITERAL(15, 26), // "on_actionNew_NPR_triggered"
-QT_MOC_LITERAL(42, 0), // ""
-QT_MOC_LITERAL(43, 27), // "on_actionOpen_PNR_triggered"
-QT_MOC_LITERAL(71, 30), // "on_actionSave_as_PNR_triggered"
-QT_MOC_LITERAL(102, 28), // "on_actionPrint_PNR_triggered"
-QT_MOC_LITERAL(131, 27), // "on_actionExit_PNR_triggered"
-QT_MOC_LITERAL(159, 27), // "on_actionUndo_PNR_triggered"
-QT_MOC_LITERAL(187, 27), // "on_actionRedo_PNR_triggered"
-QT_MOC_LITERAL(215, 27), // "on_actionSave_PNR_triggered"
-QT_MOC_LITERAL(243, 7), // "isSaved"
-QT_MOC_LITERAL(251, 23), // "on_actionFont_triggered"
-QT_MOC_LITERAL(275, 24), // "on_actionAbout_triggered"
-QT_MOC_LITERAL(300, 15), // "ShowContextMenu"
-QT_MOC_LITERAL(316, 3) // "pos"
+QT_MOC_LITERAL(15, 27), // "on_actionOpen_PNR_triggered"
+QT_MOC_LITERAL(43, 0), // ""
+QT_MOC_LITERAL(44, 30), // "on_actionSave_as_PNR_triggered"
+QT_MOC_LITERAL(75, 28), // "on_actionPrint_PNR_triggered"
+QT_MOC_LITERAL(104, 27), // "on_actionExit_PNR_triggered"
+QT_MOC_LITERAL(132, 27), // "on_actionUndo_PNR_triggered"
+QT_MOC_LITERAL(160, 27), // "on_actionRedo_PNR_triggered"
+QT_MOC_LITERAL(188, 27), // "on_actionSave_PNR_triggered"
+QT_MOC_LITERAL(216, 7), // "isSaved"
+QT_MOC_LITERAL(224, 23), // "on_actionFont_triggered"
+QT_MOC_LITERAL(248, 24), // "on_actionAbout_triggered"
+QT_MOC_LITERAL(273, 15), // "ShowContextMenu"
+QT_MOC_LITERAL(289, 3), // "pos"
+QT_MOC_LITERAL(293, 26) // "on_actionNew_PNR_triggered"
 
     },
-    "MainWindow_PNR\0on_actionNew_NPR_triggered\0"
-    "\0on_actionOpen_PNR_triggered\0"
-    "on_actionSave_as_PNR_triggered\0"
+    "MainWindow_PNR\0on_actionOpen_PNR_triggered\0"
+    "\0on_actionSave_as_PNR_triggered\0"
     "on_actionPrint_PNR_triggered\0"
     "on_actionExit_PNR_triggered\0"
     "on_actionUndo_PNR_triggered\0"
@@ -56,7 +55,7 @@ QT_MOC_LITERAL(316, 3) // "pos"
     "on_actionSave_PNR_triggered\0isSaved\0"
     "on_actionFont_triggered\0"
     "on_actionAbout_triggered\0ShowContextMenu\0"
-    "pos"
+    "pos\0on_actionNew_PNR_triggered"
 };
 #undef QT_MOC_LITERAL
 
@@ -84,8 +83,8 @@ static const uint qt_meta_data_MainWindow_PNR[] = {
        9,    0,   93,    2, 0x08,    8 /* Private */,
       10,    0,   94,    2, 0x08,    9 /* Private */,
       11,    0,   95,    2, 0x08,   10 /* Private */,
-      12,    0,   96,    2, 0x08,   11 /* Private */,
-      13,    1,   97,    2, 0x08,   12 /* Private */,
+      12,    1,   96,    2, 0x08,   11 /* Private */,
+      14,    0,   99,    2, 0x08,   13 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -98,8 +97,8 @@ static const uint qt_meta_data_MainWindow_PNR[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QPoint,   13,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QPoint,   14,
 
        0        // eod
 };
@@ -110,18 +109,18 @@ void MainWindow_PNR::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         auto *_t = static_cast<MainWindow_PNR *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_actionNew_NPR_triggered(); break;
-        case 1: _t->on_actionOpen_PNR_triggered(); break;
-        case 2: _t->on_actionSave_as_PNR_triggered(); break;
-        case 3: _t->on_actionPrint_PNR_triggered(); break;
-        case 4: _t->on_actionExit_PNR_triggered(); break;
-        case 5: _t->on_actionUndo_PNR_triggered(); break;
-        case 6: _t->on_actionRedo_PNR_triggered(); break;
-        case 7: _t->on_actionSave_PNR_triggered(); break;
-        case 8: _t->isSaved(); break;
-        case 9: _t->on_actionFont_triggered(); break;
-        case 10: _t->on_actionAbout_triggered(); break;
-        case 11: _t->ShowContextMenu((*reinterpret_cast< const QPoint(*)>(_a[1]))); break;
+        case 0: _t->on_actionOpen_PNR_triggered(); break;
+        case 1: _t->on_actionSave_as_PNR_triggered(); break;
+        case 2: _t->on_actionPrint_PNR_triggered(); break;
+        case 3: _t->on_actionExit_PNR_triggered(); break;
+        case 4: _t->on_actionUndo_PNR_triggered(); break;
+        case 5: _t->on_actionRedo_PNR_triggered(); break;
+        case 6: _t->on_actionSave_PNR_triggered(); break;
+        case 7: _t->isSaved(); break;
+        case 8: _t->on_actionFont_triggered(); break;
+        case 9: _t->on_actionAbout_triggered(); break;
+        case 10: _t->ShowContextMenu((*reinterpret_cast< const QPoint(*)>(_a[1]))); break;
+        case 11: _t->on_actionNew_PNR_triggered(); break;
         default: ;
         }
     }
@@ -135,7 +134,7 @@ const QMetaObject MainWindow_PNR::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_MainWindow_PNR_t
 , QtPrivate::TypeAndForceComplete<MainWindow_PNR, std::true_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QPoint &, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QPoint &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
 
 >,

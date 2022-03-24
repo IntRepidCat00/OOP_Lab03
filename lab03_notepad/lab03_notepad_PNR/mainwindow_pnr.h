@@ -33,7 +33,6 @@ public:
     ~MainWindow_PNR();
 
 private slots:
-    void on_actionNew_NPR_triggered();
 
     void on_actionOpen_PNR_triggered();
 
@@ -56,6 +55,8 @@ private slots:
     void on_actionAbout_triggered();
 
     void ShowContextMenu(const QPoint& pos);
+
+    void on_actionNew_PNR_triggered();
 
 private:
     Ui::MainWindow_PNR *ui;

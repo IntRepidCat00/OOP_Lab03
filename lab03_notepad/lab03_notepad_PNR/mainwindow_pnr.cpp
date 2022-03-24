@@ -34,10 +34,7 @@ MainWindow_PNR::~MainWindow_PNR()
 
 void MainWindow_PNR::ShowContextMenu(const QPoint& pos)
 {
-// for most widgets
 QPoint globalPos = ui->textEdit_PNR->mapToGlobal(pos);
-// for QAbstractScrollArea and derived classes you would use:
-// QPoint globalPos = myWidget->viewport()->mapToGlobal(pos);
 QMenu myMenu;
 myMenu.addAction(ui->actionCopy_PNR);
 myMenu.addAction(ui->actionCut_PNR);
@@ -60,17 +57,22 @@ void MainWindow_PNR::isSaved()
 
 }
 
-void MainWindow_PNR::on_actionNew_NPR_triggered()
-{
-    firstsave = true;
-    currentFile.clear();
-    ui->textEdit_PNR->setText(QString());
-}
-
-
 void MainWindow_PNR::on_actionOpen_PNR_triggered()
 {
-    QString filename = QFileDialog::getOpenFileName(this, "Open the file");
+    if(ui->textEdit_PNR->toPlainText() != savedtext)
+    {
+        QMessageBox msgBox;
+        msgBox.setText("The document has been modified.");
+        msgBox.setInformativeText("Do you want to save your changes?");
+        msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Discard);
+        msgBox.setDefaultButton(QMessageBox::Discard);
+        int res = msgBox.exec();
+        if(res == QMessageBox::Save)
+        {
+            on_actionSave_PNR_triggered();
+        }
+    }
+    QString filename = QFileDialog::getOpenFileName(this, "Open the file", "", tr("Text file (*.txt)"));
     if(filename.isEmpty())
     {
         return;
@@ -93,7 +95,7 @@ void MainWindow_PNR::on_actionOpen_PNR_triggered()
 
 void MainWindow_PNR::on_actionSave_as_PNR_triggered()
 {
-    QString filename = QFileDialog::getSaveFileName(this, "Save as");
+    QString filename = QFileDialog::getSaveFileName(this, tr("Save as"), "", tr("Text file (*.txt)"));
     if(filename.isEmpty())
     {
         return;
@@ -187,48 +189,77 @@ void MainWindow_PNR::on_actionAbout_triggered()
 
 void MainWindow_PNR::closeEvent(QCloseEvent *event)
 {
-    event->ignore();
-    QMessageBox msgBox;
-    msgBox.setText("The document has been modified.");
-    msgBox.setInformativeText("Do you want to save your changes?");
-    msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
-    msgBox.setDefaultButton(QMessageBox::Discard);
-    int res = msgBox.exec();
-    if (res == QMessageBox::Save)
-    {
-        if(firstsave)
-        {
-            QString filename = QFileDialog::getSaveFileName(this, "Save as");
-            if(filename.isEmpty())
-            {
-                event->ignore();
-            }
-            QFile file(filename);
-            if(!file.open(QFile::WriteOnly | QFile::Text))
-            {
-                QMessageBox::warning(this, "Warning", "Cannot save file\n" + file.errorString());
-                event->ignore();
-            }
-            if(firstsave)
-            {
-                firstsave=false;
-            }
-            currentFile = filename;
-            setWindowTitle(filename);
-            QTextStream out(&file);
-            QString text = ui->textEdit_PNR->toPlainText();
-            out << text;
-            savedtext = text;
-            file.close();
-        }
-        event->accept();
-    } else if(res == QMessageBox::Discard)
+    if(savedtext == ui->textEdit_PNR->toPlainText())
     {
         event->accept();
     } else
     {
         event->ignore();
+        QMessageBox msgBox;
+        msgBox.setText("The document has been modified.");
+        msgBox.setInformativeText("Do you want to save your changes?");
+        msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
+        msgBox.setDefaultButton(QMessageBox::Discard);
+        int res = msgBox.exec();
+        if (res == QMessageBox::Save)
+        {
+            if(firstsave)
+            {
+                QString filename = QFileDialog::getSaveFileName(this, tr("Save as"), "", tr("Text file (*.txt)"));
+                if(filename.isEmpty())
+                {
+                    event->ignore();
+                }
+                QFile file(filename);
+                if(!file.open(QFile::WriteOnly | QFile::Text))
+                {
+                    QMessageBox::warning(this, "Warning", "Cannot save file\n" + file.errorString());
+                    event->ignore();
+                }
+                if(firstsave)
+                {
+                    firstsave=false;
+                }
+                currentFile = filename;
+                setWindowTitle(filename);
+                QTextStream out(&file);
+                QString text = ui->textEdit_PNR->toPlainText();
+                out << text;
+                savedtext = text;
+                file.close();
+            }
+            event->accept();
+        } else if(res == QMessageBox::Discard)
+        {
+            event->accept();
+        } else
+        {
+            event->ignore();
+        }
     }
 
+}
+
+
+
+void MainWindow_PNR::on_actionNew_PNR_triggered()
+{
+    if(ui->textEdit_PNR->toPlainText() != savedtext)
+    {
+        QMessageBox msgBox;
+        msgBox.setText("The document has been modified.");
+        msgBox.setInformativeText("Do you want to save your changes?");
+        msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Discard);
+        msgBox.setDefaultButton(QMessageBox::Discard);
+        int res = msgBox.exec();
+        if(res == QMessageBox::Save)
+        {
+            on_actionSave_PNR_triggered();
+        }
+    }
+    firstsave = true;
+    currentFile = "";
+    savedtext = "";
+    ui->textEdit_PNR->setText("");
 }
 

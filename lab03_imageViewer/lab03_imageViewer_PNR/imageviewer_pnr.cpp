@@ -28,6 +28,7 @@ void ImageViewer_PNR::on_actionOpen_PNR_triggered()
             image = image.scaledToWidth(ui->imageLabel_PNR->width(), Qt::SmoothTransformation);
             ui->imageLabel_PNR->setText("");
             ui->imageLabel_PNR->setPixmap(QPixmap::fromImage(image));
+            ui->imageLabel_PNR->setAlignment (Qt::AlignCenter);
             imageScale = 1.0;
             baseWidth = ui->imageLabel_PNR->width()*imageScale;
             baseHeight = ui->imageLabel_PNR->height()*imageScale;
@@ -44,8 +45,8 @@ void ImageViewer_PNR::on_actionOpen_PNR_triggered()
 void ImageViewer_PNR::on_actionZoom_In_PNR_triggered()
 {
     imageScale += 0.2;
-    int width = ui->imageLabel_PNR->width()*imageScale;
-    int height = ui->imageLabel_PNR->height()*imageScale;
+    int width = baseWidth*imageScale;
+    int height = baseHeight*imageScale;
 
     ui->imageLabel_PNR->setPixmap(QPixmap::fromImage(image).scaled(width, height, Qt::KeepAspectRatio));
 }
@@ -54,8 +55,8 @@ void ImageViewer_PNR::on_actionZoom_In_PNR_triggered()
 void ImageViewer_PNR::on_actionZoom_Out_PNR_triggered()
 {
     imageScale -= 0.2;
-    int width = ui->imageLabel_PNR->width()*imageScale;
-    int height = ui->imageLabel_PNR->height()*imageScale;
+    int width = baseWidth*imageScale;
+    int height = baseHeight*imageScale;
 
     ui->imageLabel_PNR->setPixmap(QPixmap::fromImage(image).scaled(width, height, Qt::KeepAspectRatio));
 }

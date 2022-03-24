@@ -13,5 +13,6 @@
         <file>undo.png</file>
         <file>font.png</file>
         <file>papich.jpg</file>
+        <file>../icons/saveas.png</file>
     </qresource>
 </RCC>

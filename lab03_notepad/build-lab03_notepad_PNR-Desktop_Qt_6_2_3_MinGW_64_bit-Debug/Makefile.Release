@@ -122,7 +122,8 @@ release/qrc_resources_PNR.cpp: ../lab03_notepad_PNR/resources_PNR.qrc \
 		../lab03_notepad_PNR/papich.jpg \
 		../lab03_notepad_PNR/exit.png \
 		../lab03_notepad_PNR/paste.png \
-		../lab03_notepad_PNR/cut.png
+		../lab03_notepad_PNR/cut.png \
+		../icons/saveas.png
 	C:\Qt\6.2.3\mingw_64\bin\rcc.exe -name resources_PNR ..\lab03_notepad_PNR\resources_PNR.qrc -o release\qrc_resources_PNR.cpp
 
 compiler_moc_predefs_make_all: release/moc_predefs.h

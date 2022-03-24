@@ -135,11 +135,26 @@ public:
     {
         ImageViewer_PNR->setWindowTitle(QCoreApplication::translate("ImageViewer_PNR", "ImageViewer_PNR", nullptr));
         actionOpen_PNR->setText(QCoreApplication::translate("ImageViewer_PNR", "Open", nullptr));
+#if QT_CONFIG(shortcut)
+        actionOpen_PNR->setShortcut(QCoreApplication::translate("ImageViewer_PNR", "Ctrl+O", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionSave_as_PNR->setText(QCoreApplication::translate("ImageViewer_PNR", "Save", nullptr));
+#if QT_CONFIG(shortcut)
+        actionSave_as_PNR->setShortcut(QCoreApplication::translate("ImageViewer_PNR", "Ctrl+S", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionZoom_In_PNR->setText(QCoreApplication::translate("ImageViewer_PNR", "Zoom In", nullptr));
+#if QT_CONFIG(shortcut)
+        actionZoom_In_PNR->setShortcut(QCoreApplication::translate("ImageViewer_PNR", "Ctrl++", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionZoom_Out_PNR->setText(QCoreApplication::translate("ImageViewer_PNR", "Zoom Out", nullptr));
+#if QT_CONFIG(shortcut)
+        actionZoom_Out_PNR->setShortcut(QCoreApplication::translate("ImageViewer_PNR", "Ctrl+-", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionAbout_PNR->setText(QCoreApplication::translate("ImageViewer_PNR", "About", nullptr));
         actionNormal_Size->setText(QCoreApplication::translate("ImageViewer_PNR", "Normal Size", nullptr));
+#if QT_CONFIG(shortcut)
+        actionNormal_Size->setShortcut(QCoreApplication::translate("ImageViewer_PNR", "Ctrl+N", nullptr));
+#endif // QT_CONFIG(shortcut)
         imageLabel_PNR->setText(QString());
         menuFile->setTitle(QCoreApplication::translate("ImageViewer_PNR", "File", nullptr));
         menuTool->setTitle(QCoreApplication::translate("ImageViewer_PNR", "Tool", nullptr));
