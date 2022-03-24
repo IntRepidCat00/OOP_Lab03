@@ -203,31 +203,7 @@ void MainWindow_PNR::closeEvent(QCloseEvent *event)
         int res = msgBox.exec();
         if (res == QMessageBox::Save)
         {
-            if(firstsave)
-            {
-                QString filename = QFileDialog::getSaveFileName(this, tr("Save as"), "", tr("Text file (*.txt)"));
-                if(filename.isEmpty())
-                {
-                    event->ignore();
-                }
-                QFile file(filename);
-                if(!file.open(QFile::WriteOnly | QFile::Text))
-                {
-                    QMessageBox::warning(this, "Warning", "Cannot save file\n" + file.errorString());
-                    event->ignore();
-                }
-                if(firstsave)
-                {
-                    firstsave=false;
-                }
-                currentFile = filename;
-                setWindowTitle(filename);
-                QTextStream out(&file);
-                QString text = ui->textEdit_PNR->toPlainText();
-                out << text;
-                savedtext = text;
-                file.close();
-            }
+            on_actionSave_PNR_triggered();
             event->accept();
         } else if(res == QMessageBox::Discard)
         {
