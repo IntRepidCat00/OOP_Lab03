@@ -88,7 +88,7 @@ void MainWindow_PNR::on_actionOpen_PNR_triggered()
     QTextStream in(&file);
     QString text = in.readAll();
     ui->textEdit_PNR->setText(text);
-    firstsave = true;
+    firstsave = false;
     savedtext = text;
     file.close();
 }
